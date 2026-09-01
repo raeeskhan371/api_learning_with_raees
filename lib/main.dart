@@ -1,5 +1,7 @@
 import 'package:api_learning/screens/home_screen.dart';
 import 'package:api_learning/screens/product_screens.dart';
+import 'package:api_learning/screens/recepie.dart';
+import 'package:api_learning/screens/recepie_detail_screen.dart';
 import 'package:api_learning/screens/userList.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: ProductScreens(),
+      home: RecepieScreen(),
     );
   }
 }
