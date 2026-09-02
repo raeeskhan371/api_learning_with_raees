@@ -61,17 +61,58 @@ class _RecepieDetailScreenState extends State<RecepieDetailScreen> {
 
             Text("Ingredients", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
 
-            Text("Ingredients List"),
+            Expanded(
+              child: ListView.builder(
+                itemCount: widget.recpieItem.ingredients?.length,
 
-            const SizedBox(height: 16),
+                itemBuilder: (context, index) {
+                  final indegredients = widget.recpieItem.ingredients?[index];
 
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text("${index + 1}"),
+                          SizedBox(width: 5),
+                          Text("${indegredients.toString()}"),
+                        ],
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
             Text("Instructions", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
 
-            Text("Instructions List"),
+            Expanded(
+              child: ListView.builder(
+                itemCount: widget.recpieItem.instructions?.length,
 
-            const SizedBox(height: 16),
+                itemBuilder: (context, index) {
+                  final instructions = widget.recpieItem.instructions?[index];
 
-            Text(widget.recpieItem.tags.toString()),
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("${index + 1}."),
+                          const SizedBox(width: 5),
+                          Expanded(child: Text(instructions.toString(), softWrap: true)),
+                        ],
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+
+            SizedBox(height: 16),
+
+            Text("${widget.recpieItem.tags.toString()}"),
             Text(widget.recpieItem.mealType.toString()),
           ],
         ),
