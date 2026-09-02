@@ -1,3 +1,4 @@
+import 'package:api_learning/screens/Main_Home_Screen.dart';
 import 'package:api_learning/screens/home_screen.dart';
 import 'package:api_learning/screens/product_screens.dart';
 import 'package:api_learning/screens/recepie.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: RecepieScreen(),
+      home: MainHomeScreen(),
     );
   }
 }
