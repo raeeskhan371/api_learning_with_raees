@@ -1,4 +1,5 @@
-import 'package:api_learning/screens/product_screens.dart';
+import 'package:api_learning/screens/products/product_screens.dart';
+import 'package:api_learning/screens/recepie.dart';
 import 'package:flutter/material.dart';
 
 class MainHomeScreen extends StatelessWidget {
@@ -189,14 +190,7 @@ class MainHomeScreen extends StatelessWidget {
                 imageUrl: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80",
                 accentColor: const Color(0xFFE85D04),
                 onTap: () {
-                  // Navigate to Recipe Screen
-                  //
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (_) => const RecepieScreen(),
-                  //   ),
-                  // );
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const RecepieScreen()));
                 },
               ),
 
