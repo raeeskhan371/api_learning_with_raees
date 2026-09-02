@@ -1,3 +1,4 @@
+import 'package:api_learning/screens/book_screen.dart';
 import 'package:api_learning/screens/products/product_screens.dart';
 import 'package:api_learning/screens/recepie.dart';
 import 'package:flutter/material.dart';
@@ -207,14 +208,8 @@ class MainHomeScreen extends StatelessWidget {
                 imageUrl: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1000&q=80",
                 accentColor: const Color(0xFF16803C),
                 onTap: () {
-                  // Navigate to Books Screen
                   //
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (_) => const BooksScreen(),
-                  //   ),
-                  // );
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const BookScreen()));
                 },
               ),
 
