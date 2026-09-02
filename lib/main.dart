@@ -1,9 +1,6 @@
 import 'package:api_learning/screens/Main_Home_Screen.dart';
-import 'package:api_learning/screens/home_screen.dart';
-import 'package:api_learning/screens/product_screens.dart';
 import 'package:api_learning/screens/recepie.dart';
 import 'package:api_learning/screens/recepie_detail_screen.dart';
-import 'package:api_learning/screens/userList.dart';
 import 'package:flutter/material.dart';
 
 void main() {
